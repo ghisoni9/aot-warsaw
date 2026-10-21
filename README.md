@@ -51,7 +51,7 @@ site stays fast.
 3. On GitHub: **Settings → Pages**. Under "Build and deployment", set Source to
    **Deploy from a branch**, branch **main**, folder **/ (root)**. Save.
 4. After a minute the site is live at
-   `https://<your-username>.github.io/aot-warsaw/`.
+   `https://aotwarsaw.com/`.
 
 Every later `git push` updates the live site within a minute or so.
 
