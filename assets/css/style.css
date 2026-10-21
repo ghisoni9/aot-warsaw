@@ -114,3 +114,6 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
 
 /* role subtitle inside a card */
 .card .who { color: var(--amber); font-weight: 600; margin: 0; }
+
+/* inline brand icons next to social links */
+.icon { width: 1.05em; height: 1.05em; vertical-align: -.17em; margin-right: .45em; }
