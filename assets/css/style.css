@@ -137,3 +137,11 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
 }
 .event.next .no { color: var(--foam); background: var(--amber); color: var(--night);
   display: inline-block; padding: 3px 11px; border-radius: 999px; letter-spacing: .06em; }
+
+/* "free" badge — the events never cost anything, so say it loudly */
+.free-pill {
+  display: inline-block; background: var(--amber); color: var(--night);
+  font-weight: 700; font-size: .95em; padding: 5px 14px; border-radius: 999px;
+  letter-spacing: .02em; margin-right: 10px;
+}
+.free-note { margin: 22px 0 0; color: var(--mist); }
