@@ -59,7 +59,7 @@
     </article>
 
     <article class="event">
-      <img src="assets/img/posters/aot6_oct2026.jpg" alt="Poster for Astronomy on Tap Warsaw #6">
+      <img class="poster" src="assets/img/posters/aot6_oct2026.jpg" alt="Poster for Astronomy on Tap Warsaw #6" data-large="assets/img/posters/large/aot6_oct2026.jpg" tabindex="0" role="button" title="Click to enlarge">
       <div>
         <p class="no">#6</p>
         <h3>12 October 2026</h3>
@@ -72,7 +72,7 @@
     </article>
 
     <article class="event">
-      <img src="assets/img/posters/aot5_jun2026.jpg" alt="Poster for Astronomy on Tap Warsaw #5">
+      <img class="poster" src="assets/img/posters/aot5_jun2026.jpg" alt="Poster for Astronomy on Tap Warsaw #5" data-large="assets/img/posters/large/aot5_jun2026.jpg" tabindex="0" role="button" title="Click to enlarge">
       <div>
         <p class="no">#5</p>
         <h3>10 June 2026</h3>
@@ -85,7 +85,7 @@
     </article>
 
     <article class="event">
-      <img src="assets/img/posters/aot4_apr2026.jpg" alt="Poster for Astronomy on Tap Warsaw #4">
+      <img class="poster" src="assets/img/posters/aot4_apr2026.jpg" alt="Poster for Astronomy on Tap Warsaw #4" data-large="assets/img/posters/large/aot4_apr2026.jpg" tabindex="0" role="button" title="Click to enlarge">
       <div>
         <p class="no">#4</p>
         <h3>21 April 2026</h3>
@@ -98,7 +98,7 @@
     </article>
 
     <article class="event">
-      <img src="assets/img/posters/aot3_mar2026.jpg" alt="Poster for Astronomy on Tap Warsaw #3">
+      <img class="poster" src="assets/img/posters/aot3_mar2026.jpg" alt="Poster for Astronomy on Tap Warsaw #3" data-large="assets/img/posters/large/aot3_mar2026.jpg" tabindex="0" role="button" title="Click to enlarge">
       <div>
         <p class="no">#3</p>
         <h3>10 March 2026</h3>
@@ -111,7 +111,7 @@
     </article>
 
     <article class="event">
-      <img src="assets/img/posters/aot2_feb2026.jpg" alt="Poster for Astronomy on Tap Warsaw #2">
+      <img class="poster" src="assets/img/posters/aot2_feb2026.jpg" alt="Poster for Astronomy on Tap Warsaw #2" data-large="assets/img/posters/large/aot2_feb2026.jpg" tabindex="0" role="button" title="Click to enlarge">
       <div>
         <p class="no">#2</p>
         <h3>5 February 2026</h3>
@@ -124,7 +124,7 @@
     </article>
 
     <article class="event">
-      <img src="assets/img/posters/aot1_dec2025.jpg" alt="Poster for the first Astronomy on Tap Warsaw">
+      <img class="poster" src="assets/img/posters/aot1_dec2025.jpg" alt="Poster for the first Astronomy on Tap Warsaw" data-large="assets/img/posters/large/aot1_dec2025.jpg" tabindex="0" role="button" title="Click to enlarge">
       <div>
         <p class="no">#1 — the first one</p>
         <h3>9 December 2025</h3>
@@ -138,6 +138,41 @@
 
   </section>
 </main>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+  (() => {
+    const box = document.getElementById("lightbox");
+    const big = document.getElementById("lightbox-img");
+    let lastFocused = null;
+    const open = (img) => {
+      lastFocused = img;
+      big.src = img.dataset.large || img.src;
+      big.alt = img.alt;
+      box.hidden = false;
+      document.body.style.overflow = "hidden";
+      box.querySelector(".lightbox-close").focus();
+    };
+    const close = () => {
+      box.hidden = true; big.src = "";
+      document.body.style.overflow = "";
+      if (lastFocused) lastFocused.focus();
+    };
+    document.querySelectorAll("img.poster").forEach(img => {
+      img.addEventListener("click", () => open(img));
+      img.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(img); }
+      });
+    });
+    box.addEventListener("click", e => { if (e.target !== big) close(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) close(); });
+  })();
+  </script>
+
 
 <footer class="site-foot">
   <div class="wrap">

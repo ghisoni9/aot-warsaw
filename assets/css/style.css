@@ -164,3 +164,23 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
 }
 .icard .ico svg { width: 26px; height: 26px; }
 .icard h3 { color: var(--accent); position: relative; }
+
+/* click a poster to see it full size */
+img.poster { cursor: zoom-in; transition: transform .15s ease, border-color .15s ease; }
+img.poster:hover { transform: scale(1.02); border-color: var(--amber); }
+img.poster:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 50; display: grid; place-items: center;
+  background: rgb(5 7 20 / .93); padding: 28px; cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: min(92vw, 820px); max-height: 92vh; width: auto; border-radius: 6px; cursor: default;
+  box-shadow: 0 24px 70px rgb(0 0 0 / .6); }
+.lightbox-close {
+  position: absolute; top: 18px; right: 22px; width: 46px; height: 46px; border-radius: 50%;
+  background: var(--card); color: var(--foam); border: 1px solid var(--line);
+  font-size: 30px; line-height: 1; cursor: pointer;
+}
+.lightbox-close:hover { background: var(--amber); color: var(--night); }
+.lightbox-close:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { img.poster { transition: none; } img.poster:hover { transform: none; } }
