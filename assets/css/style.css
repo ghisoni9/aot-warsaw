@@ -156,13 +156,7 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
   background: radial-gradient(circle, color-mix(in srgb, var(--accent) 24%, transparent), transparent 70%);
   pointer-events: none;
 }
-.icard .ico {
-  position: relative; display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 16px;
-  border-radius: 50%; color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 16%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
-}
-.icard .ico svg { width: 31px; height: 31px; }
+
 .icard h3 { color: var(--accent); position: relative; }
 
 /* click a poster to see it full size */
@@ -184,3 +178,7 @@ img.poster:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px;
 .lightbox-close:hover { background: var(--amber); color: var(--night); }
 .lightbox-close:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { img.poster { transition: none; } img.poster:hover { transform: none; } }
+
+/* illustrations on the night cards */
+.icard .illu { display: block; margin-bottom: 10px; }
+.icard .illu svg { width: 96px; height: 96px; display: block; }
