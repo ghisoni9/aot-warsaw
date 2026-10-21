@@ -111,3 +111,6 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
   .hero { padding-block: 46px 34px; }
   .event img { max-width: 260px; }
 }
+
+/* role subtitle inside a card */
+.card .who { color: var(--amber); font-weight: 600; margin: 0; }
