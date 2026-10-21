@@ -145,3 +145,22 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
   letter-spacing: .02em; margin-right: 10px;
 }
 .free-note { margin: 22px 0 0; color: var(--mist); }
+
+/* "what happens on the night": one accent colour per card */
+.icard { position: relative; overflow: hidden; border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+.icard::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--accent);
+}
+.icard::after {
+  content: ""; position: absolute; width: 150px; height: 150px; right: -60px; top: -60px; border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 24%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.icard .ico {
+  position: relative; display: grid; place-items: center; width: 50px; height: 50px; margin-bottom: 14px;
+  border-radius: 50%; color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.icard .ico svg { width: 26px; height: 26px; }
+.icard h3 { color: var(--accent); position: relative; }
