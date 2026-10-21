@@ -120,6 +120,6 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
 
 /* big badge in the home hero */
 .hero-logo { border: 0; background: none;
-  width: 210px; height: auto; margin-bottom: 24px;
+  width: 300px; height: auto; margin-bottom: 24px;
 }
-@media (max-width: 760px) { .hero-logo { border: 0; background: none; width: 150px; margin-bottom: 18px; } }
+@media (max-width: 760px) { .hero-logo { border: 0; background: none; width: 210px; margin-bottom: 18px; } }
