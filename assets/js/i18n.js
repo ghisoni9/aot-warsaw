@@ -79,7 +79,7 @@
       "Want to join us?": "Chcesz dołączyć?",
       "Would you like to become part of the team? See": "Chcesz dołączyć do zespołu? Zobacz",
       "Astronomy on Tap Warsaw is free and non-profit, which means it runs on volunteers and on the people and institutions who support us. Here are three ways to be part of it.": "Astronomy on Tap Warsaw jest bezpłatne i non-profit — trzyma się dzięki wolontariuszom oraz ludziom i instytucjom, które nas wspierają. Oto trzy sposoby, żeby się włączyć.",
-      "Are you a researcher? An amateur astronomer? A sci-fi expert? You can give a talk at an AoT event! Talks are about 10 minutes, in English, for an audience with no background. No equations, lots of pictures and a story worth telling.": "Zajmujesz się nauką? Jesteś miłośnikiem astronomii? Znawcą science fiction? Możesz wystąpić na AoT! Wykłady trwają około 10 minut, po angielsku, przed publicznością bez przygotowania. Bez wzorów, dużo zdjęć i historia, którą warto opowiedzieć.",
+      "Are you a researcher? An amateur astronomer? A sci-fi expert? You can give a talk at an AoT event! Talks are about 10 minutes, in English, for an audience with no background. No equations, lots of pictures and a story worth telling.": "Zajmujesz się nauką? Jesteś miłośnikiem astronomii? Znawcą science fiction? Możesz wystąpić na AoT! Wykłady trwają około 10 minut, po angielsku, przed publicznością bez backgroundu naukowego. Bez wzorów, z dużą ilością zdjęć i historią, którą warto opowiedzieć.",
       "We run a rehearsal with every speaker beforehand, so first-time speakers are welcome too.": "Z każdym prelegentem robimy wcześniej próbę, więc debiutanci też są mile widziani.",
       "Propose a talk": "Zgłoś wykład",
       "Social Media": "Social media",
