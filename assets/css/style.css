@@ -234,7 +234,7 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 /* the Warsaw panorama, traced from a photograph of the real skyline */
 .skyline {
   height: 170px; margin-top: 46px; pointer-events: none;
-  background: url("../img/skyline.svg") no-repeat bottom center / 100% auto;
+  background: url("../img/skyline.svg?v=2026-10-22l") no-repeat bottom center / 100% auto;
   opacity: .55;
 }
 .site-foot { margin-top: 0; }
