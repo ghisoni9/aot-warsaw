@@ -5,141 +5,116 @@
 (() => {
   const DICT = {
     pl: {
-      // navigation and shell
       "Warsaw": "Warszawa",
-      "Home": "Start", "Events": "Wydarzenia", "Team": "Zespół",
-      "Get involved": "Dołącz", "Partners": "Partnerzy", "History": "Historia",
-      "Part of the worldwide": "Część światowej sieci", "network.": ".",
-
-      // home
-      "Chat with": "Porozmawiaj z", "astronomers": "astronomami", "over beers": "przy piwie",
-      "Free popular science talks in Warsaw pubs. Real astronomers explain what they actually do, you ask whatever you like, and a quiz with prizes keeps everyone on their toes. All ages, all backgrounds.":
-        "Darmowe wykłady popularnonaukowe w warszawskich pubach. Prawdziwi astronomowie opowiadają, czym naprawdę się zajmują, ty pytasz o co chcesz, a quiz z nagrodami trzyma wszystkich w napięciu. Bez względu na wiek i wykształcenie.",
-      "See the events": "Zobacz wydarzenia", "Give a talk": "Wygłoś wykład",
+      "Home": "Start",
+      "Events": "Wydarzenia",
+      "Team": "Zespół",
+      "Get involved": "Dołącz",
+      "Partners": "Partnerzy",
+      "History": "Historia",
+      "Part of the worldwide": "Część światowej sieci",
+      "network.": ".",
+      "Chat with": "Pogadaj z",
+      "astronomers": "astronomami",
+      "over beers": "przy piwie",
+      "Free popular science talks in Warsaw pubs. Real astronomers explain what they actually do, you ask whatever you like, and a quiz with prizes keeps everyone on their toes. All ages, all backgrounds.": "Darmowe spotkania popularnonaukowe w warszawskich pubach. Astronomowie z krwi i kości opowiadają, czym naprawdę się zajmują, ty pytasz, o co chcesz, a między wykładami gramy w quiz z nagrodami. Dla każdego, bez względu na wiek i wykształcenie.",
+      "See the events": "Zobacz wydarzenia",
+      "Give a talk": "Wygłoś wykład",
       "Always free": "Zawsze za darmo",
       "No ticket, no registration. Just turn up.": "Bez biletów i zapisów. Po prostu przyjdź.",
-      "Next event": "Następne wydarzenie",
+      "Next event": "Najbliższe spotkanie",
       "#7 — Monday 9 November 2026": "#7 — poniedziałek, 9 listopada 2026",
       "Free entry": "Wstęp wolny",
-      "Speakers and poster to be announced.": "Prelegenci i plakat wkrótce.",
-      "Past events & speakers": "Poprzednie wydarzenia i prelegenci",
-      "What happens on the night": "Jak wygląda wieczór",
+      "Speakers and poster to be announced.": "Prelegentów i plakat ogłosimy wkrótce.",
+      "Past events & speakers": "Minione spotkania i prelegenci",
+      "What happens on the night": "Jak wygląda taki wieczór",
       "Two talks": "Dwa wykłady",
-      "Two researchers, about 10 minutes each. Popular science, pitched so that anyone can follow it.":
-        "Dwoje naukowców, po około 10 minut. Popularnonaukowo, tak żeby każdy mógł nadążyć.",
+      "Two researchers, about 10 minutes each. Popular science, pitched so that anyone can follow it.": "Dwoje naukowców, każde po jakieś 10 minut. Popularnonaukowo — tak, żeby każdy dał radę nadążyć.",
       "A quiz": "Quiz",
-      "A quiz between the talks, played on your phone, with astronomical prizes.":
-        "Quiz między wykładami, grany na telefonie, z astronomicznymi nagrodami.",
+      "A quiz between the talks, played on your phone, with astronomical prizes.": "Między wykładami quiz na telefonach, z astronomicznymi nagrodami.",
       "Questions, all night": "Pytania przez cały wieczór",
-      "The speakers and the staff stay for a drink afterwards. If you have ever wanted to corner an astronomer and ask about aliens, this is the place.":
-        "Prelegenci i ekipa zostają potem na piwo. Jeśli zawsze chciałeś przyprzeć astronoma do muru i zapytać o kosmitów, to jest to miejsce.",
+      "The speakers and the staff stay for a drink afterwards. If you have ever wanted to corner an astronomer and ask about aliens, this is the place.": "Po wykładach prelegenci i ekipa zostają na piwo. Jeśli zawsze chciałeś przycisnąć astronoma i zapytać o kosmitów — to jest to miejsce.",
       "Come along": "Wpadnij",
-      "Entry is free and everything is in English. Follow us so you know when the next one is announced.":
-        "Wstęp jest wolny, a wszystko odbywa się po angielsku. Obserwuj nas, żeby nie przegapić kolejnego spotkania.",
-
-      // events
-      "Every event is free to attend, and always in English.":
-        "Każde wydarzenie jest bezpłatne i zawsze po angielsku.",
-      "Poster": "Plakat", "coming soon": "wkrótce",
-      "#7 · next event": "#7 · następne wydarzenie",
+      "Entry is free and everything is in English. Follow us so you know when the next one is announced.": "Wstęp wolny, wszystko po angielsku. Obserwuj nas, żeby nie przegapić kolejnego spotkania.",
+      "Every event is free to attend, and always in English.": "Każde spotkanie jest bezpłatne i zawsze po angielsku.",
+      "Poster": "Plakat",
+      "coming soon": "wkrótce",
+      "#7 · next event": "#7 · najbliższe spotkanie",
       "Monday 9 November 2026": "poniedziałek, 9 listopada 2026",
-      "Pardon, To Tu · Aleja Armii Ludowej 14 · 19:00 · Host: Nicola Principi Cavaterra":
-        "Pardon, To Tu · Aleja Armii Ludowej 14 · 19:00 · Prowadzi: Nicola Principi Cavaterra",
-      "The Taps Pub · Henryka Sienkiewicza 4 · 19:00 · Host: Nicola Principi Cavaterra":
-        "The Taps Pub · Henryka Sienkiewicza 4 · 19:00 · Prowadzi: Nicola Principi Cavaterra",
-      "The Taps · Henryka Sienkiewicza 4 · 19:00 · Host: Nicola Principi Cavaterra":
-        "The Taps · Henryka Sienkiewicza 4 · 19:00 · Prowadzi: Nicola Principi Cavaterra",
-      "Speakers to be announced": "Prelegenci wkrótce",
-      "Follow us on": "Obserwuj nas na", "or": "lub", "to hear them first.": "żeby dowiedzieć się pierwszy.",
-      "12 October 2026": "12 października 2026", "10 June 2026": "10 czerwca 2026",
-      "21 April 2026": "21 kwietnia 2026", "10 March 2026": "10 marca 2026",
-      "5 February 2026": "5 lutego 2026", "9 December 2025": "9 grudnia 2025",
-      "#1 — the first one": "#1 — pierwszy raz",
-
-      // team
+      "Pardon, To Tu · Aleja Armii Ludowej 14 · 19:00 · Host: Nicola Principi Cavaterra": "Pardon, To Tu · Aleja Armii Ludowej 14 · 19:00 · Prowadzi: Nicola Principi Cavaterra",
+      "The Taps Pub · Henryka Sienkiewicza 4 · 19:00 · Host: Nicola Principi Cavaterra": "The Taps Pub · Henryka Sienkiewicza 4 · 19:00 · Prowadzi: Nicola Principi Cavaterra",
+      "The Taps · Henryka Sienkiewicza 4 · 19:00 · Host: Nicola Principi Cavaterra": "The Taps · Henryka Sienkiewicza 4 · 19:00 · Prowadzi: Nicola Principi Cavaterra",
+      "Speakers to be announced": "Prelegentów ogłosimy wkrótce",
+      "Follow us on": "Obserwuj nas na",
+      "or": "lub",
+      "to hear them first.": ", żeby dowiedzieć się pierwszy.",
+      "12 October 2026": "12 października 2026",
+      "10 June 2026": "10 czerwca 2026",
+      "21 April 2026": "21 kwietnia 2026",
+      "10 March 2026": "10 marca 2026",
+      "5 February 2026": "5 lutego 2026",
+      "9 December 2025": "9 grudnia 2025",
+      "#1 — the first one": "#1 — ten pierwszy",
       "The team": "Zespół",
-      "Astronomy on Tap Warsaw is run entirely by volunteers.":
-        "Astronomy on Tap Warsaw działa wyłącznie dzięki wolontariuszom.",
+      "Astronomy on Tap Warsaw is run entirely by volunteers.": "Astronomy on Tap Warsaw opiera się wyłącznie na wolontariuszach.",
       "Direction": "Kierownictwo",
       "Lead, Artistic Director & Host": "Lider, dyrektor artystyczny i prowadzący",
       "Science Director & Crew Chief": "Dyrektorka naukowa i szefowa ekipy",
       "Event Director & Crew Chief": "Dyrektor ds. wydarzeń i szef ekipy",
-      "Social Media Director": "Dyrektorka ds. mediów społecznościowych",
-      "Senior advisors": "Doradcy", "Graphic design": "Grafika",
+      "Social Media Director": "Dyrektorka ds. social mediów",
+      "Senior advisors": "Doradcy",
+      "Graphic design": "Grafika",
       "Volunteer crew": "Ekipa wolontariuszy",
-      "The people who make the evenings happen.": "Ludzie, dzięki którym te wieczory się dzieją.",
-      "Website & field": "Strona i ekipa", "Field": "Ekipa",
+      "The people who make the evenings happen.": "Ludzie, dzięki którym te wieczory w ogóle się odbywają.",
+      "Website & field": "Strona i pomoc na miejscu",
+      "Field": "Pomoc na miejscu",
       "Undergraduate student relations": "Kontakt ze studentami",
-      "Sound": "Dźwięk", "Facebook events & field": "Wydarzenia na Facebooku i ekipa",
+      "Sound": "Dźwięk",
+      "Facebook events & field": "Wydarzenia na Facebooku i pomoc na miejscu",
       "Want to join us?": "Chcesz dołączyć?",
       "Would you like to become part of the team? See": "Chcesz dołączyć do zespołu? Zobacz",
-
-      // get involved
-      "Astronomy on Tap Warsaw is free and non-profit, which means it runs on volunteers and on the people and institutions who support us. Here are three ways to be part of it.":
-        "Astronomy on Tap Warsaw jest bezpłatne i non-profit, więc działa dzięki wolontariuszom oraz ludziom i instytucjom, które nas wspierają. Oto trzy sposoby, żeby być częścią tego.",
-      "Are you a researcher? An amateur astronomer? A sci-fi expert? You can give a talk at an AoT event! Talks are about 10 minutes, in English, for an audience with no background. No equations, lots of pictures and a story worth telling.":
-        "Jesteś naukowcem? Astronomem amatorem? Ekspertem od science fiction? Możesz wystąpić na AoT! Wykłady trwają około 10 minut, po angielsku, dla publiczności bez przygotowania. Bez równań, dużo obrazów i historia warta opowiedzenia.",
-      "We run a rehearsal with every speaker beforehand, so first-time speakers are welcome too.":
-        "Z każdym prelegentem robimy wcześniej próbę, więc debiutanci też są mile widziani.",
+      "Astronomy on Tap Warsaw is free and non-profit, which means it runs on volunteers and on the people and institutions who support us. Here are three ways to be part of it.": "Astronomy on Tap Warsaw jest bezpłatne i non-profit — trzyma się dzięki wolontariuszom oraz ludziom i instytucjom, które nas wspierają. Oto trzy sposoby, żeby się włączyć.",
+      "Are you a researcher? An amateur astronomer? A sci-fi expert? You can give a talk at an AoT event! Talks are about 10 minutes, in English, for an audience with no background. No equations, lots of pictures and a story worth telling.": "Zajmujesz się nauką? Jesteś miłośnikiem astronomii? Znawcą science fiction? Możesz wystąpić na AoT! Wykłady trwają około 10 minut, po angielsku, przed publicznością bez przygotowania. Bez wzorów, dużo zdjęć i historia, którą warto opowiedzieć.",
+      "We run a rehearsal with every speaker beforehand, so first-time speakers are welcome too.": "Z każdym prelegentem robimy wcześniej próbę, więc debiutanci też są mile widziani.",
       "Propose a talk": "Zgłoś wykład",
-      "Social Media": "Media społecznościowe",
-      "Join our social media team! We are looking for writers of scientific content, content creators, video editors, photographers, meme creators and graphic designers. Students, researchers and enthusiasts are all welcome, and for most of these roles you do not even need to be in Warsaw.":
-        "Dołącz do naszego zespołu social media! Szukamy autorów treści naukowych, twórców contentu, montażystów wideo, fotografów, twórców memów i grafików. Studenci, naukowcy i pasjonaci są mile widziani, a przy większości tych ról nie musisz nawet być w Warszawie.",
+      "Social Media": "Social media",
+      "Join our social media team! We are looking for writers of scientific content, content creators, video editors, photographers, meme creators and graphic designers. Students, researchers and enthusiasts are all welcome, and for most of these roles you do not even need to be in Warsaw.": "Dołącz do naszego zespołu social mediów! Szukamy osób, które piszą o nauce, twórców contentu, montażystów wideo, fotografów, twórców memów i grafików. Studenci, naukowcy i pasjonaci — każdy jest mile widziany, a przy większości tych ról nie musisz nawet być w Warszawie.",
       "Apply to the team": "Aplikuj do zespołu",
       "Become a sponsor": "Zostań sponsorem",
-      "Is your institute, company or venue interested in supporting public astronomy? Sponsors help us with prizes, printing, equipment and travel for speakers, and reach a large, curious audience in return. Every event is free thanks to them.":
-        "Twoja instytucja, firma lub lokal chce wspierać popularyzację astronomii? Sponsorzy pomagają nam z nagrodami, drukiem, sprzętem i podróżami prelegentów, a w zamian docierają do licznej i ciekawej świata publiczności. Dzięki nim każde wydarzenie jest bezpłatne.",
-      "We are happy to discuss what works for you, from a one-night partnership to supporting a whole season. See":
-        "Chętnie porozmawiamy o tym, co pasuje tobie — od wsparcia jednego wieczoru po cały sezon. Zobacz",
+      "Is your institute, company or venue interested in supporting public astronomy? Sponsors help us with prizes, printing, equipment and travel for speakers, and reach a large, curious audience in return. Every event is free thanks to them.": "Twoja instytucja, firma albo lokal chce wesprzeć popularyzację astronomii? Sponsorzy pomagają nam z nagrodami, drukiem, sprzętem i dojazdem prelegentów, a w zamian docierają do licznej i ciekawej świata publiczności. To dzięki nim wstęp jest zawsze wolny.",
+      "We are happy to discuss what works for you, from a one-night partnership to supporting a whole season. See": "Chętnie ustalimy formułę, która pasuje tobie — od jednego wieczoru po cały sezon. Zobacz",
       "for who already supports us.": "kto już nas wspiera.",
       "Talk to us about sponsoring": "Porozmawiajmy o sponsoringu",
-
-      // partners
-      "Free events need a stage, a projector and people who believe in them. Thank you to everyone below.":
-        "Darmowe wydarzenia potrzebują sceny, projektora i ludzi, którzy w nie wierzą. Dziękujemy wszystkim poniżej.",
-      "Venues": "Miejsca",
-      "Henryka Sienkiewicza 4, Warsaw. Our home for events #1 to #5, from December 2025 to June 2026.":
-        "Henryka Sienkiewicza 4, Warszawa. Nasz dom od wydarzenia #1 do #5, od grudnia 2025 do czerwca 2026.",
-      "Aleja Armii Ludowej 14, Warsaw. Live venue, record store and bookstore, and the home of event #6.":
-        "Aleja Armii Ludowej 14, Warszawa. Klub z muzyką na żywo, sklep płytowy i księgarnia — dom wydarzenia #6.",
+      "Free events need a stage, a projector and people who believe in them. Thank you to everyone below.": "Darmowe wydarzenia potrzebują sceny, projektora i ludzi, którzy w nie wierzą. Dziękujemy wszystkim poniżej.",
+      "Venues": "Nasze lokale",
+      "Henryka Sienkiewicza 4, Warsaw. Our home for events #1 to #5, from December 2025 to June 2026.": "Henryka Sienkiewicza 4, Warszawa. Nasz dom od pierwszego do piątego spotkania, od grudnia 2025 do czerwca 2026.",
+      "Aleja Armii Ludowej 14, Warsaw. Live venue, record store and bookstore, and the home of event #6.": "Aleja Armii Ludowej 14, Warszawa. Klub z muzyką na żywo, sklep płytowy i księgarnia — gospodarz szóstego spotkania.",
       "Under the patronage of": "Pod patronatem",
       "Polish Astronomical Society": "Polskie Towarzystwo Astronomiczne",
-      "Astronomy on Tap Warsaw is held under the patronage of Polskie Towarzystwo Astronomiczne (PTA), the society of professional astronomers in Poland.":
-        "Astronomy on Tap Warsaw odbywa się pod patronatem Polskiego Towarzystwa Astronomicznego (PTA), towarzystwa zawodowych astronomów w Polsce.",
+      "Astronomy on Tap Warsaw is held under the patronage of Polskie Towarzystwo Astronomiczne (PTA), the society of professional astronomers in Poland.": "Astronomy on Tap Warsaw odbywa się pod patronatem Polskiego Towarzystwa Astronomicznego (PTA), zrzeszającego zawodowych astronomów w Polsce.",
       "Become a partner": "Zostań partnerem",
-      "We are looking for support with prizes, printing and travel for speakers. If your institute or company would like to help, see":
-        "Szukamy wsparcia przy nagrodach, druku i podróżach prelegentów. Jeśli twoja instytucja lub firma chciałaby pomóc, zobacz",
-
-      // history
-      "A global network, and how it reached the Polish capital.":
-        "Światowa sieć i jak dotarła do stolicy Polski.",
-      "Where it began": "Jak się zaczęło",
-      "Astronomy on Tap started in New York in April 2013, when the astronomers Meg Schwamb and Emily Rice held the first event at the Way Station, a bar in Brooklyn. The format was simple: take researchers out of the lecture hall, put them in front of people with a drink in their hand, and let the audience ask whatever it likes.":
-        "Astronomy on Tap zaczęło się w Nowym Jorku w kwietniu 2013 roku, kiedy astronomki Meg Schwamb i Emily Rice zorganizowały pierwsze spotkanie w Way Station, barze na Brooklynie. Pomysł był prosty: wyprowadzić naukowców z sal wykładowych, postawić ich przed ludźmi z drinkiem w ręku i pozwolić publiczności pytać o cokolwiek.",
-      "It spread quickly. Within a couple of years there were events on several continents, and today the network covers cities all over the world, each chapter run by local volunteers. Everything is free, and nobody gets paid. See":
-        "Rozeszło się szybko. W ciągu kilku lat wydarzenia odbywały się na kilku kontynentach, a dziś sieć obejmuje miasta na całym świecie, a każdy oddział prowadzą lokalni wolontariusze. Wszystko jest bezpłatne i nikt nie dostaje wynagrodzenia. Pełna sieć na",
+      "We are looking for support with prizes, printing and travel for speakers. If your institute or company would like to help, see": "Szukamy wsparcia przy nagrodach, druku i dojazdach prelegentów. Jeśli twoja instytucja albo firma chciałaby pomóc, zobacz",
+      "A global network, and how it reached the Polish capital.": "Światowa sieć i jak dotarła do stolicy Polski.",
+      "Where it began": "Gdzie się zaczęło",
+      "Astronomy on Tap started in New York in April 2013, when the astronomers Meg Schwamb and Emily Rice held the first event at the Way Station, a bar in Brooklyn. The format was simple: take researchers out of the lecture hall, put them in front of people with a drink in their hand, and let the audience ask whatever it likes.": "Astronomy on Tap zaczęło się w Nowym Jorku w kwietniu 2013 roku, kiedy astronomki Meg Schwamb i Emily Rice zorganizowały pierwszy wieczór w Way Station, barze na Brooklynie. Pomysł był prosty: wyciągnąć naukowców z sal wykładowych, postawić ich przed ludźmi z drinkiem w ręku i pozwolić publiczności pytać o wszystko.",
+      "It spread quickly. Within a couple of years there were events on several continents, and today the network covers cities all over the world, each chapter run by local volunteers. Everything is free, and nobody gets paid. See": "Pomysł szybko się rozszedł. W ciągu kilku lat spotkania odbywały się na kilku kontynentach, a dziś sieć obejmuje miasta na całym świecie — każdy oddział prowadzą lokalni wolontariusze. Wszystko jest bezpłatne i nikt nie dostaje za to wynagrodzenia. Pełna sieć na",
       "for the full network.": ".",
-      "Warsaw's first Astronomy on Tap was started in 2019 by Milena Ratajczak. It ran for only a few nights: the pandemic closed the pubs in 2020, and the series stopped before it had really begun.":
-        "Pierwsze warszawskie Astronomy on Tap stworzyła w 2019 roku Milena Ratajczak. Odbyło się tylko kilka wieczorów: w 2020 pandemia zamknęła puby i seria zatrzymała się, zanim na dobre się zaczęła.",
-      "It came back in December 2025, at The Taps, a pub on Henryka Sienkiewicza. The first evening brought together two researchers working in the city, a room that filled up faster than anyone expected, and the quiz that has been part of every event since. Milena has since returned to the stage as a speaker, talking about exoplanets in February 2026.":
-        "Wróciło w grudniu 2025 roku, w The Taps, pubie przy Henryka Sienkiewicza. Pierwszy wieczór połączył dwoje naukowców pracujących w mieście, salę, która zapełniła się szybciej, niż ktokolwiek się spodziewał, i quiz, który od tamtej pory jest częścią każdego spotkania. Milena wróciła później na scenę jako prelegentka, opowiadając o egzoplanetach w lutym 2026.",
-      "Six events later, the relaunched series has hosted researchers from Polish institutes and from abroad, on everything from meteorites and interstellar comets to dark energy, hidden black holes and machine learning. The talks are in English, the entry is free, and the audience ranges from astronomy students to people who came for a beer and stayed for the stars.":
-        "Sześć wydarzeń później wznowiona seria gościła naukowców z polskich instytutów i z zagranicy — od meteorytów i komet międzygwiezdnych po ciemną energię, ukryte czarne dziury i uczenie maszynowe. Wykłady są po angielsku, wstęp jest wolny, a publiczność sięga od studentów astronomii po ludzi, którzy przyszli na piwo i zostali dla gwiazd.",
-      "Our events so far": "Nasze dotychczasowe wydarzenia",
-      "9 Dec 2025": "9 gru 2025", "5 Feb 2026": "5 lut 2026", "10 Mar 2026": "10 mar 2026",
-      "21 Apr 2026": "21 kwi 2026", "10 Jun 2026": "10 cze 2026", "12 Oct 2026": "12 paź 2026",
-      "Anna Durkalec on barely visible galaxies; Fraser Gillan on comets and interstellar rocks.":
-        "Anna Durkalec o ledwo widocznych galaktykach; Fraser Gillan o kometach i skałach międzygwiezdnych.",
-      "Milena Ratajczak on exoplanets; Nandini Hazra on how large telescopes can be.":
-        "Milena Ratajczak o egzoplanetach; Nandini Hazra o tym, jak duże mogą być teleskopy.",
-      "Wojciech Hellwing on the crisis in cosmology; Priscila Pessi on stellar deaths.":
-        "Wojciech Hellwing o kryzysie w kosmologii; Priscila Pessi o śmierci gwiazd.",
-      "Denis Burgarella on how we are built by the Universe; Krzysztof Lisiecki on stones from the sky.":
-        "Denis Burgarella o tym, jak zbudował nas Wszechświat; Krzysztof Lisiecki o kamieniach z nieba.",
-      "Łukasz Wyrzykowski on hidden black holes; Giuliano Lorenzon on the universe in a grain of dust.":
-        "Łukasz Wyrzykowski o ukrytych czarnych dziurach; Giuliano Lorenzon o wszechświecie w ziarnku pyłu.",
-      "Tom Sedgwick on cosmic discovery with AI; Pratik Dabhade on the invisible universe.":
-        "Tom Sedgwick o kosmicznych odkryciach z AI; Pratik Dabhade o niewidzialnym wszechświecie."
+      "Warsaw's first Astronomy on Tap was started in 2019 by Milena Ratajczak. It ran for only a few nights: the pandemic closed the pubs in 2020, and the series stopped before it had really begun.": "Pierwsze warszawskie Astronomy on Tap stworzyła w 2019 roku Milena Ratajczak. Odbyło się tylko kilka wieczorów: w 2020 pandemia zamknęła puby i wszystko zatrzymało się, zanim na dobre się zaczęło.",
+      "It came back in December 2025, at The Taps, a pub on Henryka Sienkiewicza. The first evening brought together two researchers working in the city, a room that filled up faster than anyone expected, and the quiz that has been part of every event since. Milena has since returned to the stage as a speaker, talking about exoplanets in February 2026.": "Wróciliśmy w grudniu 2025 roku, do pubu The Taps przy Sienkiewicza. Pierwszego wieczoru wystąpiło dwoje naukowców pracujących w Warszawie, sala zapełniła się szybciej, niż ktokolwiek się spodziewał, a quiz od tamtej pory jest częścią każdego spotkania. Milena wróciła później na scenę jako prelegentka — w lutym 2026 opowiadała o egzoplanetach.",
+      "Six events later, the relaunched series has hosted researchers from Polish institutes and from abroad, on everything from meteorites and interstellar comets to dark energy, hidden black holes and machine learning. The talks are in English, the entry is free, and the audience ranges from astronomy students to people who came for a beer and stayed for the stars.": "Sześć spotkań później gościliśmy naukowców z polskich instytutów i z zagranicy — od meteorytów i komet międzygwiezdnych po ciemną energię, ukryte czarne dziury i uczenie maszynowe. Wykłady są po angielsku, wstęp wolny, a na widowni siedzą zarówno studenci astronomii, jak i ludzie, którzy przyszli na piwo i zostali dla gwiazd.",
+      "Our events so far": "Nasze dotychczasowe spotkania",
+      "9 Dec 2025": "9 gru 2025",
+      "5 Feb 2026": "5 lut 2026",
+      "10 Mar 2026": "10 mar 2026",
+      "21 Apr 2026": "21 kwi 2026",
+      "10 Jun 2026": "10 cze 2026",
+      "12 Oct 2026": "12 paź 2026",
+      "Anna Durkalec on barely visible galaxies; Fraser Gillan on comets and interstellar rocks.": "Anna Durkalec o ledwo widocznych galaktykach; Fraser Gillan o kometach i skałach międzygwiezdnych.",
+      "Milena Ratajczak on exoplanets; Nandini Hazra on how large telescopes can be.": "Milena Ratajczak o egzoplanetach; Nandini Hazra o tym, jak wielkie potrafią być teleskopy.",
+      "Wojciech Hellwing on the crisis in cosmology; Priscila Pessi on stellar deaths.": "Wojciech Hellwing o kryzysie w kosmologii; Priscila Pessi o tym, jak umierają gwiazdy.",
+      "Denis Burgarella on how we are built by the Universe; Krzysztof Lisiecki on stones from the sky.": "Denis Burgarella o tym, jak zbudował nas Wszechświat; Krzysztof Lisiecki o kamieniach spadających z nieba.",
+      "Łukasz Wyrzykowski on hidden black holes; Giuliano Lorenzon on the universe in a grain of dust.": "Łukasz Wyrzykowski o ukrytych czarnych dziurach; Giuliano Lorenzon o wszechświecie w ziarnku pyłu.",
+      "Tom Sedgwick on cosmic discovery with AI; Pratik Dabhade on the invisible universe.": "Tom Sedgwick o kosmicznych odkryciach z pomocą AI; Pratik Dabhade o niewidzialnym wszechświecie."
     },
 
     it: {
