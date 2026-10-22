@@ -230,3 +230,14 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 
 /* night cards: titles share a baseline so the text below lines up */
 .icard h3 { line-height: 1.2; min-height: 2.4em; display: flex; align-items: flex-end; }
+
+/* stylised Warsaw skyline along the bottom of the page */
+.skyline {
+  height: 170px; margin-top: 50px; pointer-events: none;
+  background: url("../img/skyline.svg") repeat-x bottom center / auto 170px;
+  opacity: .75;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 55%);
+  mask-image: linear-gradient(to bottom, transparent, #000 55%);
+}
+.site-foot { margin-top: 0; }
+@media (max-width: 760px) { .skyline { height: 110px; background-size: auto 110px; margin-top: 30px; } }
