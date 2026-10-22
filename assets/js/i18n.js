@@ -5,6 +5,7 @@
 (() => {
   const DICT = {
     pl: {
+      "Our current venue": "Obecne miejsce",
       "Open in Google Maps": "Otwórz w Mapach Google",
       "Warsaw": "Warszawa",
       "Home": "Start",
@@ -89,7 +90,7 @@
       "Free events need a stage, a projector and people who believe in them. Thank you to everyone below.": "Darmowe wydarzenia potrzebują sceny, projektora i ludzi, którzy w nie wierzą. Dziękujemy wszystkim poniżej.",
       "Venues": "Nasze lokale",
       "Henryka Sienkiewicza 4, Warsaw. Our home for events #1 to #5, from December 2025 to June 2026.": "Henryka Sienkiewicza 4, Warszawa. Nasz dom od pierwszego do piątego spotkania, od grudnia 2025 do czerwca 2026.",
-      "Aleja Armii Ludowej 14, Warsaw. Live venue, record store and bookstore, and the home of event #6.": "Aleja Armii Ludowej 14, Warszawa. Klub z muzyką na żywo, sklep płytowy i księgarnia — gospodarz szóstego spotkania.",
+      "Aleja Armii Ludowej 14, Warsaw. Live venue, record store and bookstore, and our home since event #6.": "Aleja Armii Ludowej 14, Warszawa. Klub z muzyką na żywo, sklep płytowy i księgarnia — nasz dom od szóstego spotkania.",
       "Under the patronage of": "Pod patronatem",
       "Polish Astronomical Society": "Polskie Towarzystwo Astronomiczne",
       "Astronomy on Tap Warsaw is held under the patronage of Polskie Towarzystwo Astronomiczne (PTA), the society of professional astronomers in Poland.": "Astronomy on Tap Warsaw odbywa się pod patronatem Polskiego Towarzystwa Astronomicznego (PTA), zrzeszającego zawodowych astronomów w Polsce.",
@@ -119,6 +120,7 @@
     },
 
     it: {
+      "Our current venue": "La nostra sede attuale",
       "Open in Google Maps": "Apri in Google Maps",
       "Warsaw": "Varsavia",
       "Home": "Home",
@@ -203,7 +205,7 @@
       "Free events need a stage, a projector and people who believe in them. Thank you to everyone below.": "Un evento gratuito ha bisogno di un palco, di un proiettore e di qualcuno che ci creda. Grazie a tutti quelli qui sotto.",
       "Venues": "I locali",
       "Henryka Sienkiewicza 4, Warsaw. Our home for events #1 to #5, from December 2025 to June 2026.": "Henryka Sienkiewicza 4, Varsavia. La nostra casa dal primo al quinto evento, da dicembre 2025 a giugno 2026.",
-      "Aleja Armii Ludowej 14, Warsaw. Live venue, record store and bookstore, and the home of event #6.": "Aleja Armii Ludowej 14, Varsavia. Locale con musica dal vivo, negozio di dischi e libreria: la casa del sesto evento.",
+      "Aleja Armii Ludowej 14, Warsaw. Live venue, record store and bookstore, and our home since event #6.": "Aleja Armii Ludowej 14, Varsavia. Locale con musica dal vivo, negozio di dischi e libreria: la nostra casa dal sesto evento.",
       "Under the patronage of": "Con il patrocinio di",
       "Polish Astronomical Society": "Società Astronomica Polacca",
       "Astronomy on Tap Warsaw is held under the patronage of Polskie Towarzystwo Astronomiczne (PTA), the society of professional astronomers in Poland.": "Astronomy on Tap Warsaw si svolge con il patrocinio della Società Astronomica Polacca (Polskie Towarzystwo Astronomiczne, PTA), che riunisce gli astronomi professionisti del Paese.",
@@ -233,6 +235,7 @@
     },
 
     ca: {
+      "Our current venue": "El nostre local actual",
       "Open in Google Maps": "Obre a Google Maps",
       "Warsaw": "Varsòvia",
       "Home": "Inici",
@@ -317,7 +320,7 @@
       "Free events need a stage, a projector and people who believe in them. Thank you to everyone below.": "Un esdeveniment gratuït necessita un escenari, un projector i gent que hi cregui. Gràcies a tothom que hi ha aquí sota.",
       "Venues": "Els locals",
       "Henryka Sienkiewicza 4, Warsaw. Our home for events #1 to #5, from December 2025 to June 2026.": "Henryka Sienkiewicza 4, Varsòvia. La nostra casa del primer al cinquè esdeveniment, del desembre del 2025 al juny del 2026.",
-      "Aleja Armii Ludowej 14, Warsaw. Live venue, record store and bookstore, and the home of event #6.": "Aleja Armii Ludowej 14, Varsòvia. Sala de concerts, botiga de discos i llibreria: la casa del sisè esdeveniment.",
+      "Aleja Armii Ludowej 14, Warsaw. Live venue, record store and bookstore, and our home since event #6.": "Aleja Armii Ludowej 14, Varsòvia. Sala de concerts, botiga de discos i llibreria: la nostra casa des del sisè esdeveniment.",
       "Under the patronage of": "Sota el patrocini de",
       "Polish Astronomical Society": "Societat Astronòmica Polonesa",
       "Astronomy on Tap Warsaw is held under the patronage of Polskie Towarzystwo Astronomiczne (PTA), the society of professional astronomers in Poland.": "Astronomy on Tap Warsaw se celebra sota el patrocini de la Societat Astronòmica Polonesa (Polskie Towarzystwo Astronomiczne, PTA), que aplega els astrònoms professionals del país.",

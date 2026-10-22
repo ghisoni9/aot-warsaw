@@ -209,3 +209,6 @@ img.poster:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px;
   border-bottom: 1px solid transparent; }
 .maplink:hover { border-bottom-color: currentColor; }
 .maplink .pin { width: 17px; height: 17px; flex: none; }
+.now-pill { display: inline-block; background: rgb(245 177 61 / .16); border: 1px solid var(--amber);
+  color: var(--amber); font-weight: 700; font-size: .86em; padding: 4px 12px; border-radius: 999px;
+  letter-spacing: .03em; }
