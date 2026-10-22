@@ -231,11 +231,11 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 /* night cards: titles share a baseline so the text below lines up */
 .icard h3 { line-height: 1.2; min-height: 2.4em; display: flex; align-items: flex-end; }
 
-/* the Warsaw panorama, traced from a photograph of the real skyline */
+/* Warsaw panorama: layered silhouettes, drawn for this site */
 .skyline {
-  height: 170px; margin-top: 46px; pointer-events: none;
-  background: url("../img/skyline.svg?v=2026-10-22l") no-repeat bottom center / 100% auto;
-  opacity: .55;
+  width: 100%; aspect-ratio: 4 / 1; margin-top: 40px; pointer-events: none;
+  background: url("../img/skyline.svg?v=2026-10-22m") no-repeat bottom center / 100% 100%;
+  opacity: .5;
 }
 .site-foot { margin-top: 0; }
-@media (max-width: 760px) { .skyline { height: 110px; margin-top: 26px; opacity: .45; } }
+@media (max-width: 760px) { .skyline { margin-top: 22px; opacity: .42; } }
