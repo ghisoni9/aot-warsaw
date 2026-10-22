@@ -7,6 +7,7 @@
   --amber-soft: #ffc96b;
   --foam: #fff4df;
   --mist: #b9bfe6;
+  --rose: #ffb3ab;
   --line: rgb(255 244 223 / .16);
   --card: rgb(255 244 223 / .05);
   --display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -219,3 +220,10 @@ img.poster:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px;
   font-size: clamp(15px, 1.6vw, 19px); letter-spacing: .26em; text-transform: uppercase;
   color: var(--amber);
 }
+
+/* free-entry line: short, bold, its own colour — no bubble */
+p.freeline {
+  margin: 22px 0 0; font-family: var(--display); font-weight: 700; color: var(--rose);
+  font-size: clamp(21px, 2.3vw, 27px); letter-spacing: -.01em;
+}
+p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
