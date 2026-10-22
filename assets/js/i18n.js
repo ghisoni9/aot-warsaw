@@ -5,6 +5,9 @@
 (() => {
   const DICT = {
     pl: {
+      "See the next event": "Zobacz najbliższe spotkanie",
+      "All events": "Wszystkie spotkania",
+      "Would you like to speak or join the team? See": "Chcesz wystąpić albo dołączyć do zespołu? Zobacz",
       "Always free! No tickets.": "Zawsze za darmo! Bez biletów.",
       "Free entry!": "Wstęp wolny!",
       "Everything in English.": "Wszystko po angielsku.",
@@ -120,6 +123,9 @@
     },
 
     it: {
+      "See the next event": "Guarda la prossima serata",
+      "All events": "Tutte le serate",
+      "Would you like to speak or join the team? See": "Vuoi fare un intervento o entrare nel team? Vedi",
       "Always free! No tickets.": "Sempre gratis! Niente biglietti.",
       "Free entry!": "Ingresso libero!",
       "Everything in English.": "Tutto in inglese.",
@@ -235,6 +241,9 @@
     },
 
     ca: {
+      "See the next event": "Mira la pròxima nit",
+      "All events": "Totes les nits",
+      "Would you like to speak or join the team? See": "Vols fer una xerrada o entrar a l'equip? Mira",
       "Always free! No tickets.": "Sempre gratuït! Sense entrades.",
       "Free entry!": "Entrada lliure!",
       "Everything in English.": "Tot es fa en anglès.",
