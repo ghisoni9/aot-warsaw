@@ -193,3 +193,4 @@ img.poster:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px;
 .lang-btn:hover { background: var(--card); color: var(--foam); }
 .lang-btn[aria-pressed="true"] { background: var(--foam); color: var(--night); border-color: var(--foam); }
 .lang-btn:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.lang-btn .flag { margin-right: 5px; font-size: 1.12em; line-height: 1; }
