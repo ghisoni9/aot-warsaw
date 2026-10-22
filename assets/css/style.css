@@ -127,7 +127,7 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
 
 /* cards in a row share a baseline: the action sits at the bottom */
 .cards .card { display: flex; flex-direction: column; }
-.cards .card > p:last-child { margin-top: auto; margin-bottom: 0; }
+.cards .card > p.card-action { margin-top: auto; margin-bottom: 0; }
 
 /* upcoming event: placeholder where the poster will go */
 .poster-soon {
@@ -227,3 +227,6 @@ p.freeline {
   font-size: clamp(21px, 2.3vw, 27px); letter-spacing: -.01em;
 }
 p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
+
+/* night cards: titles share a baseline so the text below lines up */
+.icard h3 { line-height: 1.2; min-height: 2.4em; display: flex; align-items: flex-end; }
