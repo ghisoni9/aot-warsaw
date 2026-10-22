@@ -233,3 +233,11 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 
 
 
+
+/* the series' own tagline, under the new headline */
+.tagline { margin: -6px 0 18px; font-family: var(--display); font-size: clamp(19px, 2vw, 23px); color: var(--mist); }
+.after-cards { margin: 22px 0 0; color: var(--mist); font-size: 17px; }
+/* four show cards: two by two, four across on a wide screen */
+.cards.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 1000px) { .cards.four { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .cards.four { grid-template-columns: 1fr; } }
