@@ -5,6 +5,7 @@
 (() => {
   const DICT = {
     pl: {
+      "Astronomy for everyone": "Astronomia dla każdego",
       "Our current venue": "Obecne miejsce",
       "Open in Google Maps": "Otwórz w Mapach Google",
       "Warsaw": "Warszawa",
@@ -120,6 +121,7 @@
     },
 
     it: {
+      "Astronomy for everyone": "L'astronomia per tutti",
       "Our current venue": "La nostra sede attuale",
       "Open in Google Maps": "Apri in Google Maps",
       "Warsaw": "Varsavia",
@@ -235,6 +237,7 @@
     },
 
     ca: {
+      "Astronomy for everyone": "L'astronomia per a tothom",
       "Our current venue": "El nostre local actual",
       "Open in Google Maps": "Obre a Google Maps",
       "Warsaw": "Varsòvia",

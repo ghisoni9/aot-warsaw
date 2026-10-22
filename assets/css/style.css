@@ -212,3 +212,10 @@ img.poster:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px;
 .now-pill { display: inline-block; background: rgb(245 177 61 / .16); border: 1px solid var(--amber);
   color: var(--amber); font-weight: 700; font-size: .86em; padding: 4px 12px; border-radius: 999px;
   letter-spacing: .03em; }
+
+/* slogan above the hero headline */
+.slogan {
+  margin: 0 0 14px; font-family: var(--brand, var(--text)); font-weight: 700;
+  font-size: clamp(15px, 1.6vw, 19px); letter-spacing: .26em; text-transform: uppercase;
+  color: var(--amber);
+}
