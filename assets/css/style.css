@@ -233,9 +233,11 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 
 /* Warsaw panorama: layered silhouettes, drawn for this site */
 .skyline {
-  width: 100%; aspect-ratio: 1200 / 170; margin-top: 40px; pointer-events: none;
-  background: url("../img/skyline.svg?v=2026-10-22q") no-repeat bottom center / 100% 100%;
+  width: 100%; aspect-ratio: 1200 / 220; margin-top: 40px; pointer-events: none;
+  background: url("../img/skyline.svg?v=2026-10-22r") no-repeat bottom center / 100% 100%;
   opacity: .62;
 }
 .site-foot { margin-top: 0; }
 @media (max-width: 760px) { .skyline { margin-top: 22px; opacity: .42; } }
+
+.site-foot .credit { margin: 6px 0 0; font-size: 13px; opacity: .75; }
