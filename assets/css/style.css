@@ -203,3 +203,9 @@ img.poster:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px;
 
 .site-head .wrap { flex-wrap: wrap; }
 .lang-btn { display: grid; place-items: center; }
+
+/* link to the venue on a map */
+.maplink { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; text-decoration: none;
+  border-bottom: 1px solid transparent; }
+.maplink:hover { border-bottom-color: currentColor; }
+.maplink .pin { width: 17px; height: 17px; flex: none; }

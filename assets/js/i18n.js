@@ -5,6 +5,7 @@
 (() => {
   const DICT = {
     pl: {
+      "Open in Google Maps": "Otwórz w Mapach Google",
       "Warsaw": "Warszawa",
       "Home": "Start",
       "Events": "Wydarzenia",
@@ -118,6 +119,7 @@
     },
 
     it: {
+      "Open in Google Maps": "Apri in Google Maps",
       "Warsaw": "Varsavia",
       "Home": "Home",
       "Events": "Eventi",
@@ -231,6 +233,7 @@
     },
 
     ca: {
+      "Open in Google Maps": "Obre a Google Maps",
       "Warsaw": "Varsòvia",
       "Home": "Inici",
       "Events": "Esdeveniments",
