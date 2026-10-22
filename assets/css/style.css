@@ -234,7 +234,7 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 /* Warsaw panorama: layered silhouettes, drawn for this site */
 .skyline {
   width: 100%; aspect-ratio: 1200 / 170; margin-top: 40px; pointer-events: none;
-  background: url("../img/skyline.svg?v=2026-10-22o") no-repeat bottom center / 100% 100%;
+  background: url("../img/skyline.svg?v=2026-10-22q") no-repeat bottom center / 100% 100%;
   opacity: .62;
 }
 .site-foot { margin-top: 0; }
