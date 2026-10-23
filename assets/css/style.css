@@ -236,5 +236,12 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 
 
 /* partner and venue logos */
-.partner-logo { height: 62px; width: auto; align-self: flex-start; object-fit: contain; border-radius: 6px; margin-bottom: 14px; }
-.partner-logo.chip { background: #fff; padding: 6px; }
+
+
+
+/* partner and venue logos: top-right corner, inside the existing card */
+.card.has-logo { position: relative; }
+.card.has-logo > h3 { padding-right: 86px; }
+.partner-logo { position: absolute; top: 16px; right: 16px; height: 56px; width: auto;
+  max-width: 96px; object-fit: contain; opacity: .95; }
+@media (max-width: 560px) { .partner-logo { height: 44px; } .card.has-logo > h3 { padding-right: 64px; } }
