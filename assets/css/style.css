@@ -234,3 +234,7 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 
 
 
+
+/* partner and venue logos */
+.partner-logo { height: 62px; width: auto; align-self: flex-start; object-fit: contain; border-radius: 6px; margin-bottom: 14px; }
+.partner-logo.chip { background: #fff; padding: 6px; }
