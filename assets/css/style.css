@@ -243,5 +243,5 @@ p.freeline.small { font-size: clamp(18px, 1.9vw, 22px); margin: 10px 0 0; }
 .card.has-logo { position: relative; }
 .card.has-logo > h3 { padding-right: 86px; }
 .partner-logo { position: absolute; top: 16px; right: 16px; height: 56px; width: auto;
-  max-width: 96px; object-fit: contain; opacity: .95; }
+  max-width: 96px; object-fit: contain; opacity: .95; border-radius: 4px; }
 @media (max-width: 560px) { .partner-logo { height: 44px; } .card.has-logo > h3 { padding-right: 64px; } }
