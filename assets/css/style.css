@@ -19,6 +19,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0; color: var(--foam); font-family: var(--text); font-size: 17px; line-height: 1.6;
   background:
+    url("../img/stars.svg?v=2026-10-23b") repeat 0 0 / 700px 700px,
     radial-gradient(1200px 700px at 78% -5%, #262d72 0%, transparent 65%),
     radial-gradient(900px 700px at 8% 30%, rgb(126 84 214 / .22), transparent 70%),
     linear-gradient(180deg, var(--deep) 0%, var(--night) 55%) fixed;
