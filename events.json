@@ -1,0 +1,20 @@
+{
+  "_comment": "Facts for the next event. Run build_events.py after editing: it rewrites the Event structured data in events.html and checks the visible page still says the same thing. The visible HTML stays hand-written, because the language switcher needs a human translation for each new English string (dates included).",
+  "next": {
+    "number": 7,
+    "date": "2026-11-09",
+    "start": "19:00",
+    "end": "22:00",
+    "utc_offset": "+01:00",
+    "venue": {
+      "name": "Pardon, To Tu",
+      "street": "Aleja Armii Ludowej 14",
+      "city": "Warszawa",
+      "country": "PL"
+    },
+    "host": "Nicola Principi Cavaterra",
+    "speakers": ["Mariana Jaber", "Kishan Deka"],
+    "free": true,
+    "page": "https://aotwarsaw.com/events.html"
+  }
+}
