@@ -13,8 +13,18 @@
       "country": "PL"
     },
     "host": "Nicola Principi Cavaterra",
-    "speakers": ["Mariana Jaber", "Kishan Deka"],
+    "speakers": [
+      {
+        "name": "Mariana Jaber",
+        "talk": "Astronomy of the future"
+      },
+      {
+        "name": "Kishan Deka",
+        "talk": "Messengers from the Sky: Light, Ghost and Ripples"
+      }
+    ],
     "free": true,
-    "page": "https://aotwarsaw.com/events.html"
+    "page": "https://aotwarsaw.com/events.html",
+    "poster": "https://aotwarsaw.com/assets/img/posters/large/aot7_nov2026.jpg"
   }
 }

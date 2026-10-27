@@ -35,13 +35,15 @@ def build_ld(ev):
     d = datetime.date.fromisoformat(ev["date"])
     venue = ev["venue"]
     name = "Astronomy on Tap Warsaw #%d" % ev["number"]
-    speakers = ", ".join(ev["speakers"])
+    speakers = " and ".join(
+        "\u201c%s\u201d by %s" % (s["talk"], s["name"]) if s.get("talk") else s["name"]
+        for s in ev["speakers"])
     ld = {
         "@context": "https://schema.org",
         "@type": "Event",
         "name": name,
         "description": ("A free evening of astronomy in Warsaw: two short talks "
-                        "by researchers (%s), a quiz with prizes, and the chance "
+                        "by researchers \u2014 %s \u2014 a quiz with prizes, and the chance "
                         "to meet scientists over a drink. In English, no ticket "
                         "needed." % speakers),
         "startDate": "%sT%s:00%s" % (ev["date"], ev["start"], ev["utc_offset"]),
@@ -58,7 +60,9 @@ def build_ld(ev):
                 "addressCountry": venue["country"],
             },
         },
-        "image": ["https://aotwarsaw.com/assets/img/share-card.jpg"],
+        # the poster first; the share card is the 16:9 fallback Google prefers
+        "image": ([ev["poster"]] if ev.get("poster") else [])
+                 + ["https://aotwarsaw.com/assets/img/share-card.jpg"],
         "url": ev["page"],
         "inLanguage": "en",
         "isAccessibleForFree": bool(ev["free"]),
@@ -67,7 +71,10 @@ def build_ld(ev):
             "name": "Astronomy on Tap Warsaw",
             "url": "https://aotwarsaw.com/",
         },
-        "performer": [{"@type": "Person", "name": s} for s in ev["speakers"]],
+        "performer": [{"@type": "Person", "name": s["name"]} for s in ev["speakers"]],
+        "subEvent": [{"@type": "Event", "name": s["talk"],
+                      "performer": {"@type": "Person", "name": s["name"]}}
+                     for s in ev["speakers"] if s.get("talk")],
     }
     if ev["free"]:
         ld["offers"] = {
@@ -97,7 +104,10 @@ def check(html, ev, d):
     text = visible_text(html)
     human_date = "%s %d %s %d" % (d.strftime("%A"), d.day, MONTHS[d.month - 1], d.year)
     wanted = [human_date, ev["start"], ev["venue"]["name"], ev["venue"]["street"]]
-    wanted += ev["speakers"]
+    for s in ev["speakers"]:
+        wanted.append(s["name"])
+        if s.get("talk"):
+            wanted.append(s["talk"])
     missing = [w for w in wanted if w not in text]
     return human_date, missing
 
@@ -125,7 +135,8 @@ def main():
         sys.exit("MISMATCH - these facts are in the markup but not visible on the "
                  "page:\n  " + "\n  ".join(missing))
     print("verified: page and markup agree on %s, %s, %s, %s"
-          % (human_date, ev["start"], ev["venue"]["name"], ", ".join(ev["speakers"])))
+          % (human_date, ev["start"], ev["venue"]["name"],
+             ", ".join(s["name"] for s in ev["speakers"])))
 
     if d < datetime.date.today():
         sys.exit("WARNING: %s is in the past - update events.json" % ev["date"])
