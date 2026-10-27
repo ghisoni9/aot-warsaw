@@ -131,6 +131,14 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
 .cards .card { display: flex; flex-direction: column; }
 .cards .card > p.card-action { margin-top: auto; margin-bottom: 0; }
 
+/* home page next-event card: poster beside the details */
+.card.next-card { display: grid; grid-template-columns: 190px 1fr; gap: 24px; align-items: start; }
+.card.next-card > div > :first-child { margin-top: 0; }
+@media (max-width: 760px) {
+  .card.next-card { grid-template-columns: 1fr; }
+  .card.next-card img.poster { max-width: 240px; }
+}
+
 /* upcoming event: placeholder where the poster will go */
 .poster-soon {
   display: grid; place-items: center; text-align: center; aspect-ratio: 637 / 900;
@@ -171,7 +179,7 @@ img.poster:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px;
   background: rgb(5 7 20 / .93); padding: 28px; cursor: zoom-out;
 }
 .lightbox[hidden] { display: none; }
-.lightbox img { max-width: min(92vw, 820px); max-height: 92vh; width: auto; border-radius: 6px; cursor: default;
+.lightbox .lightbox-img { max-width: min(92vw, 820px); max-height: 92vh; width: auto; border-radius: 6px; cursor: default;
   box-shadow: 0 24px 70px rgb(0 0 0 / .6); }
 .lightbox-close {
   position: absolute; top: 18px; right: 22px; width: 46px; height: 46px; border-radius: 50%;
