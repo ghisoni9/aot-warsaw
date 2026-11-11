@@ -14,6 +14,9 @@ than quietly publishing a lie to Google.
 
     python3 build_events.py          # rewrite and verify
     python3 build_events.py --check  # verify only, change nothing
+
+Once an event is over, set "next" to null in events.json and run it again:
+the markup comes out rather than advertising a date that has passed.
 """
 
 import datetime
@@ -114,12 +117,28 @@ def check(html, ev, d):
 
 def main():
     check_only = "--check" in sys.argv
-    ev = json.loads((ROOT / "events.json").read_text(encoding="utf-8"))["next"]
-    ld, d = build_ld(ev)
+    ev = json.loads((ROOT / "events.json").read_text(encoding="utf-8")).get("next")
     html = EVENTS_PAGE.read_text(encoding="utf-8")
 
     if START not in html or END not in html:
         sys.exit("markers %s / %s not found in events.html" % (START, END))
+
+    if not ev:
+        # Nothing coming up. An Event whose date has passed is not worth
+        # offering Google, so the block is emptied and the markers left in
+        # place for the next one.
+        if not check_only:
+            html = re.sub(re.escape(START) + r".*?" + re.escape(END),
+                          lambda m: START + "\n" + END, html, flags=re.S)
+            EVENTS_PAGE.write_text(html, encoding="utf-8")
+            print("no next event in events.json - Event structured data removed")
+        else:
+            inside = re.search(re.escape(START) + r"(.*?)" + re.escape(END), html, re.S).group(1)
+            print("no next event; markup block is %s"
+                  % ("empty" if not inside.strip() else "STILL PRESENT"))
+        return
+
+    ld, d = build_ld(ev)
 
     if not check_only:
         block = (START + "\n<script type=\"application/ld+json\">\n"
