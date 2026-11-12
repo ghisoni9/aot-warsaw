@@ -41,14 +41,21 @@ def build_ld(ev):
     speakers = " and ".join(
         "\u201c%s\u201d by %s" % (s["talk"], s["name"]) if s.get("talk") else s["name"]
         for s in ev["speakers"])
+    # an event can be announced before its line-up is settled, so the talks
+    # only enter the description once there are speakers to name
+    if speakers:
+        described = ("A free evening of astronomy in Warsaw: two short talks by "
+                     "researchers \u2014 %s \u2014 a quiz with prizes, and the chance to "
+                     "meet scientists over a drink. In English, no ticket needed." % speakers)
+    else:
+        described = ("A free evening of astronomy in Warsaw: two short talks by "
+                     "researchers, a quiz with prizes, and the chance to meet "
+                     "scientists over a drink. In English, no ticket needed.")
     ld = {
         "@context": "https://schema.org",
         "@type": "Event",
         "name": name,
-        "description": ("A free evening of astronomy in Warsaw: two short talks "
-                        "by researchers \u2014 %s \u2014 a quiz with prizes, and the chance "
-                        "to meet scientists over a drink. In English, no ticket "
-                        "needed." % speakers),
+        "description": described,
         "startDate": "%sT%s:00%s" % (ev["date"], ev["start"], ev["utc_offset"]),
         "endDate": "%sT%s:00%s" % (ev["date"], ev["end"], ev["utc_offset"]),
         "eventStatus": "https://schema.org/EventScheduled",
@@ -74,11 +81,15 @@ def build_ld(ev):
             "name": "Astronomy on Tap Warsaw",
             "url": "https://aotwarsaw.com/",
         },
-        "performer": [{"@type": "Person", "name": s["name"]} for s in ev["speakers"]],
-        "subEvent": [{"@type": "Event", "name": s["talk"],
-                      "performer": {"@type": "Person", "name": s["name"]}}
-                     for s in ev["speakers"] if s.get("talk")],
     }
+    # empty performer / subEvent arrays say nothing; leave them out entirely
+    if ev["speakers"]:
+        ld["performer"] = [{"@type": "Person", "name": s["name"]} for s in ev["speakers"]]
+        talks = [{"@type": "Event", "name": s["talk"],
+                  "performer": {"@type": "Person", "name": s["name"]}}
+                 for s in ev["speakers"] if s.get("talk")]
+        if talks:
+            ld["subEvent"] = talks
     if ev["free"]:
         ld["offers"] = {
             "@type": "Offer",

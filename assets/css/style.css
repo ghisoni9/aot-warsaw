@@ -112,7 +112,7 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
 @media (max-width: 760px) {
   .hero-grid, .event, .role, .timeline li { grid-template-columns: 1fr; }
   .hero { padding-block: 46px 34px; }
-  .event img { max-width: 260px; }
+  .event img, .event .poster-soon { max-width: 260px; }
 }
 
 /* role subtitle inside a card */
@@ -136,7 +136,7 @@ h3 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; font-weight:
 .card.next-card > div > :first-child { margin-top: 0; }
 @media (max-width: 760px) {
   .card.next-card { grid-template-columns: 1fr; }
-  .card.next-card img.poster { max-width: 240px; }
+  .card.next-card img.poster, .card.next-card .poster-soon { max-width: 240px; }
 }
 
 /* upcoming event: placeholder where the poster will go */

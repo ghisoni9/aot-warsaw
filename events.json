@@ -27,5 +27,22 @@
     "page": "https://aotwarsaw.com/events.html",
     "poster": "https://aotwarsaw.com/assets/img/posters/large/aot7_nov2026.jpg"
   },
-  "next": null
+  "next": {
+    "number": 8,
+    "date": "2026-12-06",
+    "start": "19:00",
+    "end": "22:00",
+    "utc_offset": "+01:00",
+    "venue": {
+      "name": "Pardon, To Tu",
+      "street": "Aleja Armii Ludowej 14",
+      "city": "Warszawa",
+      "country": "PL"
+    },
+    "host": "Nicola Principi Cavaterra",
+    "speakers": [],
+    "free": true,
+    "page": "https://aotwarsaw.com/events.html",
+    "poster": null
+  }
 }
