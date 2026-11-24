@@ -40,9 +40,18 @@
       "country": "PL"
     },
     "host": "Nicola Principi Cavaterra",
-    "speakers": [],
+    "speakers": [
+      {
+        "name": "Vishal Ravishankar",
+        "talk": "Ghostbusters: The Neutrino Edition"
+      },
+      {
+        "name": "Anna Durkalec",
+        "talk": "Where's the Rest of the Universe?"
+      }
+    ],
     "free": true,
     "page": "https://aotwarsaw.com/events.html",
-    "poster": null
+    "poster": "https://aotwarsaw.com/assets/img/posters/large/aot8_dec2026.jpg"
   }
 }
